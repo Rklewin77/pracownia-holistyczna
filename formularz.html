@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zapis na konsultację — Pracownia Holistyczna „Kiedy ciało mówi dość…"</title>
+<meta name="description" content="Zapisz się na konsultację wstępną w Pracowni Holistycznej „Kiedy ciało mówi dość…". Krótki, dyskretny formularz." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --oat: #f3ece0;
+    --oat-deep: #ece2d2;
+    --cream: #faf6ef;
+    --clay: #b9714f;
+    --clay-soft: #c98a68;
+    --forest: #092e12;
+    --forest-deep: #092e12;
+    --sage: #8a9b87;
+    --ink: #2c2620;
+    --ink-soft: #5d564c;
+    --line: #d9cdb9;
+    --shadow: 44px 44px 88px rgba(60, 74, 62, 0.10);
+    --shadow-sm: 0 18px 44px rgba(60, 74, 62, 0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Hanken Grotesk", sans-serif;
+    background: var(--oat);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: url("tlo-nat2a.png") center top / cover no-repeat;
+    filter: contrast(1.22) brightness(0.88) saturate(1.04);
+  }
+  body::after {
+    content: "";
+    position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+    opacity: 0.40; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+  }
+  .atmos { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .atmos::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(243,236,224,0.42) 0%, rgba(243,236,224,0.46) 55%, rgba(243,236,224,0.30) 100%); }
+
+  .wrap { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 0 28px; }
+
+  header { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 34px 0 0; }
+  .mark { font-family: "Fraunces", serif; font-weight: 500; font-size: 1.05rem; letter-spacing: 0.01em; display: flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; }
+  .mark .leaf { width: 26px; height: 26px; flex: none; color: var(--clay); }
+  .nav-cta { font-size: 0.84rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 3px; transition: color .3s, border-color .3s; }
+  .nav-cta:hover { color: var(--clay); border-color: var(--clay); }
+
+  .page-head { padding: 7vh 0 1vh; }
+  .kicker { font-size: 0.78rem; letter-spacing: 0.34em; text-transform: uppercase; color: var(--forest); margin-bottom: 22px; display: flex; align-items: center; gap: 14px; }
+  .kicker::before { display: none; }
+  .page-head h1 { font-family: "Fraunces", serif; font-weight: 300; font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.04; letter-spacing: -0.02em; color: var(--forest-deep); max-width: 20ch; }
+  .page-head h1 em { font-style: normal; color: var(--clay); }
+  .page-head p { margin-top: 18px; font-size: 1.08rem; font-weight: 300; max-width: 52ch; color: var(--ink-soft); }
+
+  .reveal { opacity: 0; transform: translateY(22px); animation: rise 1s cubic-bezier(.2,.7,.2,1) forwards; }
+  .d1 { animation-delay: .1s; } .d2 { animation-delay: .22s; } .d3 { animation-delay: .34s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+
+  .booking { padding: 4vh 0 4vh; }
+  .booking-card { background: rgba(250,246,239,0.55); border: 1px solid transparent; border-radius: 34px; padding: clamp(28px, 5vw, 56px); box-shadow: var(--shadow-sm); position: relative; transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s; }
+  .booking-card:hover { transform: translateY(-10px); box-shadow: 0 44px 90px rgba(60,74,62,0.28); }
+
+  form { position: relative; }
+  .fieldset-label { font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--forest); margin: 32px 0 18px; }
+  .fieldset-label:first-of-type { margin-top: 0; }
+  .fieldset-note { font-size: 0.86rem; color: var(--ink-soft); margin: -8px 0 18px; line-height: 1.5; font-style: italic; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .field { margin-bottom: 22px; display: flex; flex-direction: column; }
+  .field.full { grid-column: 1 / -1; }
+  label.flab { font-size: 0.82rem; letter-spacing: 0.04em; color: var(--forest); margin-bottom: 9px; font-weight: 600; }
+  label.flab .req { color: var(--clay); }
+  label.flab .opt { color: var(--sage); font-weight: 400; font-size: 0.78rem; letter-spacing: 0; }
+  input, textarea, select { font-family: inherit; font-size: 1rem; color: var(--ink); background: rgba(255,255,255,0.6); border: 1px solid transparent; border-radius: 14px; padding: 15px 17px; transition: border-color .3s, background .3s, box-shadow .3s; width: 100%; }
+  input::placeholder, textarea::placeholder { color: #a89e8d; }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: var(--clay); background: #fff; box-shadow: 0 0 0 4px rgba(185,113,79,0.10); }
+  textarea { resize: vertical; min-height: 92px; }
+
+  .radios { display: flex; flex-wrap: wrap; gap: 10px; }
+  .radio { position: relative; }
+  .radio input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+  .radio span { display: inline-block; padding: 11px 18px; border: 1px solid transparent; border-radius: 100px; background: rgba(255,255,255,0.5); font-size: 0.92rem; color: var(--ink-soft); cursor: pointer; transition: all .25s; }
+  .radio input:checked + span { background: var(--forest); color: var(--cream); border-color: var(--forest); }
+
+  .consent { display: flex; gap: 13px; align-items: flex-start; margin: 12px 0 30px; }
+  .consent input { width: 20px; height: 20px; flex: none; margin-top: 3px; accent-color: var(--forest); cursor: pointer; }
+  .consent label { font-size: 0.9rem; color: var(--ink-soft); font-weight: 400; line-height: 1.5; }
+  .consent .req { color: var(--clay); }
+
+  .submit-row { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+  button[type="submit"] { font-family: inherit; font-size: 1.02rem; letter-spacing: 0.02em; background: rgba(9,46,18,0.70); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); color: var(--cream); border: none; border-radius: 100px; padding: 18px 40px; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; transition: background .35s, transform .35s; box-shadow: var(--shadow-sm); }
+  button[type="submit"]:hover:not(:disabled) { background: rgba(9,46,18,0.92); transform: translateY(-2px); }
+  button[type="submit"]:disabled { opacity: 0.6; cursor: wait; }
+  button[type="submit"] .arrow { transition: transform .35s; }
+  button[type="submit"]:hover:not(:disabled) .arrow { transform: translateX(4px); }
+  .form-hint { font-size: 0.84rem; color: var(--ink-soft); }
+  .spinner { width: 17px; height: 17px; border: 2px solid rgba(255,255,255,0.4); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; display: none; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  form.sending button .arrow { display: none; }
+  form.sending .spinner { display: inline-block; }
+
+  .success { display: none; text-align: center; padding: 30px 10px; }
+  .success.show { display: block; animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+  .success .ring { width: 76px; height: 76px; margin: 0 auto 26px; border-radius: 50%; background: var(--forest); display: flex; align-items: center; justify-content: center; }
+  .success .ring svg { width: 34px; height: 34px; color: var(--cream); }
+  .success h3 { font-family: "Fraunces", serif; font-weight: 400; font-size: 2rem; color: var(--forest-deep); margin-bottom: 12px; }
+  .success p { color: var(--ink-soft); font-weight: 300; max-width: 42ch; margin: 0 auto; }
+  .success .back { display: inline-block; margin-top: 26px; font-size: 0.9rem; color: var(--clay); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 3px; }
+  .error-msg { display: none; margin-top: 16px; color: var(--clay); font-size: 0.9rem; }
+  .error-msg.show { display: block; }
+
+  footer { position: relative; z-index: 1; text-align: center; padding: 6vh 28px 6vh; }
+  footer .fname { font-family: "Fraunces", serif; font-size: 1.15rem; color: var(--forest-deep); margin-bottom: 6px; text-shadow: 0 1px 12px rgba(250,246,239,0.95); }
+  footer .contact { color: var(--ink); font-size: 0.92rem; text-shadow: 0 1px 10px rgba(250,246,239,0.95); }
+  footer .legal { margin-top: 18px; font-size: 0.78rem; color: var(--ink-soft); text-shadow: 0 1px 10px rgba(250,246,239,0.9); }
+
+  @media (max-width: 820px) {
+    body { background-position: 72% center; }
+    .grid2 { grid-template-columns: 1fr; }
+    header { padding-top: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="atmos"></div>
+
+<div class="wrap">
+
+  <header class="reveal d1">
+    <a href="index.html" class="nav-cta">← Powrót na stronę główną</a>
+  </header>
+
+  <section class="page-head">
+    <div class="kicker reveal d1">Zapis na konsultację</div>
+    <h1 class="reveal d2">Powiedz mi, <em>co Cię do mnie sprowadza.</em></h1>
+    <p class="reveal d3">Formularz jest krótki — wypełnij go spokojnie. Odezwę się do Ciebie najszybciej, jak to możliwe, żeby umówić dogodny termin pierwszej rozmowy.</p>
+  </section>
+
+  <section class="booking">
+    <div class="booking-card reveal d3">
+      <form id="bookingForm" novalidate>
+        <div class="fieldset-label">Twoje dane</div>
+        <div class="grid2">
+          <div class="field">
+            <label class="flab" for="name">Imię i nazwisko <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="np. Anna Kowalska" required />
+          </div>
+          <div class="field">
+            <label class="flab" for="phone">Numer telefonu <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="np. 600 100 200" required />
+          </div>
+          <div class="field full">
+            <label class="flab" for="email">Adres e-mail <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="np. anna@email.com" required />
+          </div>
+          <div class="field full">
+            <label class="flab" for="sprawa">W jakiej sprawie się zgłaszasz? <span class="opt">(opcjonalnie)</span></label>
+            <select id="sprawa" name="sprawa">
+              <option value="">— wybierz —</option>
+              <option>Przewlekłe zmęczenie</option>
+              <option>Problemy ze snem</option>
+              <option>Problemy trawienne</option>
+              <option>Stres i przeciążenie</option>
+              <option>Wsparcie zdrowotne</option>
+              <option>Konsultacja holistyczna</option>
+              <option>Inne</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="fieldset-label">Kilka słów o Twojej sytuacji</div>
+        <p class="fieldset-note">Wszystkie poniższe pola są w pełni dobrowolne — wypełnij tyle, ile zechcesz. Resztę spokojnie omówimy na konsultacji.</p>
+        <div class="grid2">
+          <div class="field full">
+            <label class="flab" for="powod">Co skłoniło Cię do kontaktu właśnie teraz? <span class="opt">(opcjonalnie)</span></label>
+            <textarea id="powod" name="powod" placeholder="Napisz kilka słów…"></textarea>
+          </div>
+          <div class="field full">
+            <label class="flab" for="sygnaly">Jakie sygnały lub dolegliwości najbardziej zwracają obecnie Twoją uwagę? <span class="opt">(opcjonalnie)</span></label>
+            <textarea id="sygnaly" name="sygnaly" placeholder="np. zmęczenie, problemy ze snem, trawienie…"></textarea>
+          </div>
+          <div class="field full">
+            <label class="flab">Od jak dawna obserwujesz te trudności? <span class="opt">(opcjonalnie)</span></label>
+            <div class="radios">
+              <label class="radio"><input type="radio" name="odKiedy" value="krócej niż 3 miesiące"><span>krócej niż 3 miesiące</span></label>
+              <label class="radio"><input type="radio" name="odKiedy" value="3–12 miesięcy"><span>3–12 miesięcy</span></label>
+              <label class="radio"><input type="radio" name="odKiedy" value="1–3 lata"><span>1–3 lata</span></label>
+              <label class="radio"><input type="radio" name="odKiedy" value="ponad 3 lata"><span>ponad 3 lata</span></label>
+            </div>
+          </div>
+          <div class="field full">
+            <label class="flab" for="jakoscZycia">Co najbardziej wpływa obecnie na jakość Twojego życia? <span class="opt">(opcjonalnie)</span></label>
+            <textarea id="jakoscZycia" name="jakoscZycia" placeholder="Napisz kilka słów…"></textarea>
+          </div>
+          <div class="field full">
+            <label class="flab" for="oczekiwania">Czego oczekujesz od konsultacji lub współpracy? <span class="opt">(opcjonalnie)</span></label>
+            <textarea id="oczekiwania" name="oczekiwania" placeholder="Napisz kilka słów…"></textarea>
+          </div>
+          <div class="field full">
+            <label class="flab" for="odSiebie">Jeśli chcesz, możesz dodać kilka słów od siebie. <span class="opt">(opcjonalnie)</span></label>
+            <textarea id="odSiebie" name="odSiebie" placeholder="To pole jest całkowicie dla Ciebie."></textarea>
+          </div>
+        </div>
+
+        <div class="fieldset-label">Na koniec</div>
+        <div class="field full">
+          <label class="flab" for="skad">Skąd dowiedziałaś/eś się o Pracowni? <span class="opt">(opcjonalnie)</span></label>
+          <select id="skad" name="skad">
+            <option value="">— wybierz —</option>
+            <option>Facebook</option>
+            <option>Instagram</option>
+            <option>Polecenie</option>
+            <option>Strona internetowa</option>
+            <option>Inne</option>
+          </select>
+        </div>
+
+        <div class="consent">
+          <input type="checkbox" id="rodo" name="rodo" required />
+          <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych — w tym informacji dotyczących zdrowia — podanych w tym formularzu, w celu kontaktu i umówienia konsultacji. Zapoznałam/em się z <a href="polityka-prywatnosci.html" target="_blank" rel="noopener">polityką prywatności</a>. <span class="req">*</span></label>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit">
+            <span class="spinner"></span>
+            <span class="btn-label">Zapisz się na konsultację</span>
+            <span class="arrow">→</span>
+          </button>
+          <span class="form-hint">Pola oznaczone <span style="color:var(--clay)">*</span> są wymagane</span>
+        </div>
+        <div class="error-msg" id="errorMsg">Coś poszło nie tak przy wysyłce. Spróbuj ponownie za chwilę.</div>
+      </form>
+
+      <div class="success" id="successState">
+        <div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Dziękuję, mam Twoje zgłoszenie.</h3>
+        <p>Odezwę się do Ciebie wkrótce, by umówić dogodny termin. Do usłyszenia — i odetchnij spokojnie. 🌿</p>
+        <a href="index.html" class="back">← Wróć na stronę główną</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="fname">Pracownia Holistyczna „Kiedy ciało mówi dość…"</div>
+  <div class="contact">Aneta Kurnikowska</div>
+  <div class="legal">© 2026 · Wszystkie prawa zastrzeżone</div>
+</footer>
+
+<script>
+  const WEBHOOK_URL = "https://n8n.srv1236472.hstgr.cloud/webhook/zapis-pracownia";
+
+  const form = document.getElementById("bookingForm");
+  const successState = document.getElementById("successState");
+  const errorMsg = document.getElementById("errorMsg");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    errorMsg.classList.remove("show");
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    const odKiedyEl = form.querySelector('input[name="odKiedy"]:checked');
+    const data = {
+      name: form.name.value.trim(),
+      phone: form.phone.value.trim(),
+      email: form.email.value.trim(),
+      sprawa: form.sprawa.value,
+      powod: form.powod.value.trim(),
+      sygnaly: form.sygnaly.value.trim(),
+      odKiedy: odKiedyEl ? odKiedyEl.value : "",
+      jakoscZycia: form.jakoscZycia.value.trim(),
+      oczekiwania: form.oczekiwania.value.trim(),
+      odSiebie: form.odSiebie.value.trim(),
+      skad: form.skad.value,
+      rodo: form.rodo.checked,
+      source: "strona-formularz",
+      submittedAt: new Date().toISOString()
+    };
+
+    form.classList.add("sending");
+    form.querySelector("button").disabled = true;
+    try {
+      const res = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+      if (!res.ok) throw new Error("Bad response");
+      form.style.display = "none";
+      successState.classList.add("show");
+      successState.scrollIntoView({ behavior: "smooth", block: "center" });
+    } catch (err) {
+      console.error(err);
+      errorMsg.classList.add("show");
+      form.classList.remove("sending");
+      form.querySelector("button").disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>

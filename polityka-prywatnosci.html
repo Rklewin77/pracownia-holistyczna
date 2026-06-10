@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Polityka prywatności — Pracownia Holistyczna „Kiedy ciało mówi dość…"</title>
+<meta name="description" content="Polityka prywatności Pracowni Holistycznej „Kiedy ciało mówi dość…" — jak przetwarzamy dane z formularza zapisu." />
+<meta name="robots" content="noindex" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --oat: #f3ece0; --oat-deep: #ece2d2; --cream: #faf6ef;
+    --clay: #b9714f; --forest: #092e12; --forest-deep: #092e12;
+    --sage: #8a9b87; --ink: #2c2620; --ink-soft: #5d564c; --line: #d9cdb9;
+    --shadow-sm: 0 18px 44px rgba(60, 74, 62, 0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Hanken Grotesk", sans-serif;
+    background: var(--oat);
+    color: var(--ink); line-height: 1.65; overflow-x: hidden; position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: url("tlo-nat2a.png") center top / cover no-repeat;
+    filter: contrast(1.22) brightness(0.88) saturate(1.04);
+  }
+  body::after {
+    content: "";
+    position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+    opacity: 0.40; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+  }
+  .atmos { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  .atmos::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(243,236,224,0.55) 0%, rgba(243,236,224,0.62) 100%); }
+  .wrap { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; padding: 0 28px; }
+
+  header { display: flex; align-items: center; justify-content: flex-end; padding: 34px 0 0; }
+  .logo { display: inline-flex; align-items: center; color: var(--sage); }
+  .logo .leaf { width: 30px; height: 30px; }
+  .nav-cta { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); text-decoration: none; background: rgba(9,46,18,0.70); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); transition: background .35s, transform .35s; }
+  .nav-cta:hover { background: rgba(9,46,18,0.92); transform: translateY(-2px); }
+
+  .doc { background: rgba(250,246,239,0.55); border-radius: 28px; padding: clamp(28px, 5vw, 56px); margin: 6vh 0; box-shadow: var(--shadow-sm); transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s; }
+  .doc:hover { box-shadow: 0 44px 90px rgba(60,74,62,0.28); }
+  .kicker { font-size: 0.78rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--forest); margin-bottom: 16px; }
+  .doc h1 { font-family: "Fraunces", serif; font-weight: 300; font-size: clamp(2rem, 5vw, 2.8rem); color: var(--forest-deep); line-height: 1.1; margin-bottom: 10px; }
+  .doc .updated { font-size: 0.86rem; color: var(--ink-soft); margin-bottom: 30px; }
+  .note { background: rgba(185,113,79,0.10); border-left: 3px solid var(--clay); border-radius: 10px; padding: 14px 18px; font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 34px; }
+  .doc h2 { font-family: "Fraunces", serif; font-weight: 400; font-size: 1.3rem; color: var(--forest-deep); margin: 30px 0 10px; }
+  .doc p { margin-bottom: 12px; color: var(--ink); font-weight: 300; }
+  .doc ul { margin: 0 0 12px 1.1rem; }
+  .doc li { margin-bottom: 7px; font-weight: 300; }
+  .doc a { color: var(--clay); }
+  .fill { background: #f3e3d6; padding: 1px 6px; border-radius: 5px; font-weight: 500; color: #8a5436; }
+
+  footer { position: relative; z-index: 1; text-align: center; padding: 4vh 28px 6vh; }
+  footer .fname { font-family: "Fraunces", serif; font-size: 1.1rem; color: var(--forest-deep); margin-bottom: 6px; }
+  footer .contact { color: var(--ink-soft); font-size: 0.9rem; }
+
+  @media (max-width: 820px) { header { padding-top: 24px; } }
+</style>
+</head>
+<body>
+
+<div class="atmos"></div>
+
+<div class="wrap">
+
+  <header>
+    <a href="index.html" class="nav-cta">← Powrót na stronę główną</a>
+  </header>
+
+  <article class="doc">
+    <div class="kicker">Dokument</div>
+    <h1>Polityka prywatności</h1>
+    <div class="updated">Ostatnia aktualizacja: <span class="fill">[DO UZUPEŁNIENIA — data]</span></div>
+
+    <div class="note">
+      ⚠️ <strong>Wersja robocza / szkielet.</strong> Fragmenty oznaczone <span class="fill">[DO UZUPEŁNIENIA]</span> wymagają uzupełnienia danymi Pracowni. Przed publikacją warto, aby dokument przejrzała osoba znająca RODO (przy danych dotyczących zdrowia obowiązują podwyższone wymogi).
+    </div>
+
+    <h2>1. Kto jest administratorem Twoich danych</h2>
+    <p>Administratorem danych osobowych jest <strong>Aneta Kurnikowska</strong>, prowadząca Pracownię Holistyczną „Kiedy ciało mówi dość…", <span class="fill">[DO UZUPEŁNIENIA — adres / NIP, jeśli dotyczy]</span>.</p>
+    <p>Kontakt w sprawie danych: e-mail <a href="mailto:kiedycialo@wp.pl">kiedycialo@wp.pl</a>, tel. <span class="fill">[DO UZUPEŁNIENIA — telefon]</span>.</p>
+
+    <h2>2. Jakie dane przetwarzamy</h2>
+    <p>Za pośrednictwem formularza zapisu na konsultację przetwarzamy dane, które podajesz dobrowolnie:</p>
+    <ul>
+      <li>imię i nazwisko, numer telefonu, adres e-mail,</li>
+      <li>informacje, które samodzielnie zdecydujesz się podać w treści zgłoszenia — w tym dotyczące Twojego samopoczucia, dolegliwości i sytuacji zdrowotnej (tzw. dane szczególnej kategorii).</li>
+    </ul>
+
+    <h2>3. Cel i podstawa prawna</h2>
+    <p>Twoje dane przetwarzamy w celu kontaktu i umówienia konsultacji wstępnej.</p>
+    <ul>
+      <li>dla danych kontaktowych — Twoja zgoda (art. 6 ust. 1 lit. a RODO),</li>
+      <li>dla informacji dotyczących zdrowia — Twoja wyraźna zgoda (art. 9 ust. 2 lit. a RODO).</li>
+    </ul>
+
+    <h2>4. Dobrowolność podania danych</h2>
+    <p>Podanie danych jest dobrowolne, ale niezbędne, abyśmy mogli się z Tobą skontaktować i umówić konsultację.</p>
+
+    <h2>5. Jak długo przechowujemy dane</h2>
+    <p>Dane przechowujemy do czasu załatwienia sprawy, w której się zgłaszasz, lub do momentu cofnięcia przez Ciebie zgody — nie dłużej niż <span class="fill">[DO UZUPEŁNIENIA — np. 12 miesięcy]</span>.</p>
+
+    <h2>6. Komu powierzamy dane</h2>
+    <p>Do obsługi zgłoszeń korzystamy z zaufanych narzędzi, które przetwarzają dane w naszym imieniu (na podstawie umów powierzenia przetwarzania):</p>
+    <ul>
+      <li>Google (przechowywanie zgłoszeń w arkuszu / poczta),</li>
+      <li>Brevo (wysyłka wiadomości e-mail / potwierdzeń),</li>
+      <li>dostawca rozwiązania do automatyzacji (system odbierający zgłoszenia z formularza).</li>
+    </ul>
+    <p>Nie sprzedajemy ani nie udostępniamy Twoich danych w celach marketingowych.</p>
+
+    <h2>7. Przekazywanie danych poza Europejski Obszar Gospodarczy</h2>
+    <p>Niektórzy dostawcy (np. Google) mogą przetwarzać dane również poza EOG. Odbywa się to na podstawie odpowiednich zabezpieczeń, m.in. standardowych klauzul umownych zatwierdzonych przez Komisję Europejską.</p>
+
+    <h2>8. Twoje prawa</h2>
+    <p>W każdej chwili masz prawo do:</p>
+    <ul>
+      <li>dostępu do swoich danych i otrzymania ich kopii,</li>
+      <li>sprostowania, usunięcia lub ograniczenia przetwarzania,</li>
+      <li>wniesienia sprzeciwu oraz przenoszenia danych,</li>
+      <li>cofnięcia zgody w dowolnym momencie (bez wpływu na zgodność z prawem przetwarzania sprzed cofnięcia),</li>
+      <li>wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (PUODO).</li>
+    </ul>
+    <p>Aby skorzystać z praw, napisz na: <a href="mailto:kiedycialo@wp.pl">kiedycialo@wp.pl</a>.</p>
+
+    <h2>9. Pliki cookies</h2>
+    <p>Strona w obecnej formie <span class="fill">[DO UZUPEŁNIENIA — nie korzysta / korzysta]</span> z plików cookies oraz narzędzi analitycznych. W razie ich dodania ta sekcja zostanie zaktualizowana.</p>
+
+    <h2>10. Kontakt</h2>
+    <p>W sprawach dotyczących danych osobowych skontaktuj się z nami: <a href="mailto:kiedycialo@wp.pl">kiedycialo@wp.pl</a>.</p>
+  </article>
+
+</div>
+
+<footer>
+  <div class="fname">Pracownia Holistyczna „Kiedy ciało mówi dość…"</div>
+  <div class="contact">Aneta Kurnikowska</div>
+</footer>
+
+</body>
+</html>
