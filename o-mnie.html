@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>O mnie — Pracownia Holistyczna „Kiedy ciało mówi dość…"</title>
+<meta name="description" content="Aneta Kurnikowska — naturopatka i fitoterapeutka. Moja droga, moje podejście i to, w co wierzę pracując z drugim człowiekiem." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --oat: #f3ece0; --oat-deep: #ece2d2; --cream: #faf6ef;
+    --clay: #b9714f; --clay-soft: #c98a68; --forest: #092e12; --forest-deep: #092e12;
+    --sage: #8a9b87; --ink: #2c2620; --ink-soft: #5d564c; --line: #d9cdb9;
+    --shadow: 44px 44px 88px rgba(60, 74, 62, 0.10);
+    --shadow-sm: 0 18px 44px rgba(60, 74, 62, 0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Hanken Grotesk", sans-serif;
+    background: var(--oat);
+    color: var(--ink); line-height: 1.7; overflow-x: hidden; position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: url("tlo-nat2a.png") center top / cover no-repeat;
+    filter: contrast(1.22) brightness(0.88) saturate(1.04);
+  }
+  body::after {
+    content: "";
+    position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+    opacity: 0.40; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+  }
+  .atmos { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  .atmos::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(243,236,224,0.55) 0%, rgba(243,236,224,0.62) 100%); }
+  .wrap { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; padding: 0 28px; }
+
+  header { display: flex; align-items: center; justify-content: flex-end; padding: 34px 0 0; }
+  .nav-cta { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); text-decoration: none; background: rgba(9,46,18,0.70); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); transition: background .35s, transform .35s; }
+  .nav-cta:hover { background: rgba(9,46,18,0.92); transform: translateY(-2px); }
+
+  .doc { background: rgba(250,246,239,0.62); border-radius: 28px; padding: clamp(30px, 5.5vw, 64px); margin: 6vh 0; box-shadow: var(--shadow-sm); }
+
+  .photo-row { display: flex; align-items: center; gap: 26px; margin-bottom: 38px; flex-wrap: wrap; }
+  .photo-row img { width: 132px; height: 132px; object-fit: cover; object-position: center 28%; border-radius: 50%; box-shadow: var(--shadow-sm); filter: brightness(1.06) saturate(0.94); }
+  .kicker { font-size: 0.78rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--forest); margin-bottom: 10px; }
+  .photo-row h1 { font-family: "Fraunces", serif; font-weight: 300; font-size: clamp(1.9rem, 4.6vw, 2.6rem); color: var(--forest-deep); line-height: 1.1; }
+
+  .lead { font-family: "Fraunces", serif; font-weight: 400; font-size: clamp(1.25rem, 2.8vw, 1.55rem); color: var(--forest-deep); line-height: 1.35; margin: 38px 0 14px; }
+  .lead:first-of-type { margin-top: 0; }
+  .doc p { margin-bottom: 16px; font-weight: 300; font-size: 1.04rem; color: var(--ink); max-width: 64ch; }
+  .steps { font-family: "Fraunces", serif; font-style: italic; font-size: 1.12rem; color: var(--ink-soft); margin: 6px 0 16px; }
+
+  .divider { display: flex; align-items: center; gap: 14px; margin: 44px 0 36px; color: var(--sage); }
+  .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .divider svg { width: 20px; height: 20px; }
+
+  .creed { font-family: "Fraunces", serif; font-weight: 400; font-style: italic; font-size: clamp(1.3rem, 3vw, 1.6rem); color: var(--clay); line-height: 1.4; max-width: 30ch; }
+  .creed strong { font-style: normal; font-weight: 500; color: var(--forest-deep); }
+  .sign { margin-top: 30px; font-family: "Fraunces", serif; font-style: italic; font-size: 1.15rem; color: var(--clay-soft); }
+
+  .cta-row { margin-top: 44px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 12px; background: rgba(9,46,18,0.78); color: var(--cream); text-decoration: none; font-size: 0.92rem; letter-spacing: 0.04em; padding: 16px 28px; border-radius: 100px; box-shadow: var(--shadow-sm); transition: background .35s, transform .35s; }
+  .btn:hover { background: rgba(9,46,18,0.95); transform: translateY(-2px); }
+  .btn .arrow { transition: transform .35s; }
+  .btn:hover .arrow { transform: translateX(4px); }
+  .meta-note { font-size: 0.9rem; color: var(--ink-soft); }
+  .meta-note strong { color: var(--forest); }
+
+  footer { position: relative; z-index: 1; text-align: center; padding: 2vh 28px 6vh; }
+  footer .fname { font-family: "Fraunces", serif; font-size: 1.1rem; color: var(--forest-deep); margin-bottom: 6px; }
+  footer .contact { color: var(--ink-soft); font-size: 0.9rem; }
+
+  @media (max-width: 820px) {
+    header { padding-top: 24px; }
+    .photo-row { gap: 18px; }
+    .photo-row img { width: 104px; height: 104px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="atmos"></div>
+
+<div class="wrap">
+
+  <header>
+    <a href="index.html" class="nav-cta">← Powrót na stronę główną</a>
+  </header>
+
+  <article class="doc">
+
+    <div class="photo-row">
+      <img src="783237c8-9d01-49b8-aa0a-bb3578008f58.jpg" alt="Aneta Kurnikowska" />
+      <div>
+        <div class="kicker">Pracownia Holistyczna</div>
+        <h1>O mnie</h1>
+      </div>
+    </div>
+
+    <p class="lead">Wierzę, że organizm nie działa przeciwko nam.</p>
+    <p>Nawet wtedy, gdy pojawia się zmęczenie, ból, problemy ze snem czy utrata równowagi, ciało nie jest naszym przeciwnikiem. Wysyła sygnały, które warto zauważyć, zrozumieć i potraktować z uważnością.</p>
+
+    <p class="lead">Moja droga do naturopatii i fitoterapii nie zaczęła się od książek ani szkoleń.</p>
+    <p>Zaczęła się od życia, które wielokrotnie zmuszało mnie do szukania odpowiedzi poza utartymi schematami. To były lata własnych doświadczeń, walki o zdrowie syna oraz nieustannego poszukiwania przyczyn zamiast tłumienia objawów.</p>
+    <p>To właśnie te doświadczenia nauczyły mnie patrzeć na człowieka całościowo. Nie przez pryzmat pojedynczego objawu, ale jego historii, codzienności, emocji, środowiska i potrzeb.</p>
+    <p>W swojej pracy łączę wiedzę z zakresu naturopatii, fitoterapii, mykoterapii, suplementacji oraz nowoczesnych metod oceny funkcjonowania organizmu. Korzystam z różnych metod i narzędzi, ponieważ wierzę, że każdy człowiek jest inny i wymaga indywidualnego podejścia.</p>
+
+    <p class="lead">Nie szukam gotowych schematów.</p>
+    <p>Moją rolą jest towarzyszenie drugiej osobie w lepszym zrozumieniu własnego organizmu oraz wspólne poszukiwanie czynników, które mogą utrudniać jego naturalną zdolność do regeneracji i powrotu do równowagi.</p>
+
+    <p class="lead">Wierzę, że zdrowienie jest procesem.</p>
+    <p class="steps">Krok po kroku.<br>Z uważnością, szacunkiem i zaufaniem do mądrości organizmu.</p>
+
+    <div class="divider">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4.5-3.5 7-7.5 7-11a7 7 0 1 0-14 0c0 3.5 2.5 7.5 7 11z" opacity="0"/><path d="M12 3c-4 4-6 7-6 10a6 6 0 0 0 12 0c0-3-2-6-6-10z" opacity="0"/><path d="M12 22s-7-4.5-7-11.5C5 6 8 3 12 3s7 3 7 7.5C19 17.5 12 22 12 22z" opacity="0"/><path d="M12 2C9 6 6 9.5 6 13.5 6 17.6 8.7 21 12 21s6-3.4 6-7.5C18 9.5 15 6 12 2z" opacity="0"/><path d="M7 17c4-1 8-5 9.5-11M7 17c0-5 2.5-9 9.5-11M7 17c-1.5 1.5-2 3-2 4" /></svg>
+    </div>
+
+    <p class="creed">Nie pracuję po to, by naprawiać ludzi.<br><strong>Pracuję po to, by pomóc im odnaleźć własną drogę do równowagi.</strong></p>
+
+    <div class="sign">— Aneta Kurnikowska</div>
+
+    <div class="cta-row">
+      <a href="formularz.html" class="btn">Zostaw zgłoszenie <span class="arrow">→</span></a>
+      <span class="meta-note">Pierwsza rozmowa <strong>bez zobowiązań</strong></span>
+    </div>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="fname">Pracownia Holistyczna „Kiedy ciało mówi dość…"</div>
+  <div class="contact">Aneta Kurnikowska</div>
+</footer>
+
+</body>
+</html>
