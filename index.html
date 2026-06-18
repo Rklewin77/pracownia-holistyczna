@@ -113,7 +113,7 @@
   .about { padding: 4vh 0 5vh; }
   .about-grid { width: 100%; }
   .about-panel { background: rgba(9,46,18,0.70); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); border-radius: 28px; padding: clamp(28px, 4vw, 52px); color: var(--cream); display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 44px; align-items: center; }
-  .about-photo img { width: 100%; max-width: 250px; aspect-ratio: 1 / 1; height: auto; object-fit: cover; object-position: center 28%; display: block; margin: 0 auto; border-radius: 50%; box-shadow: var(--shadow); filter: brightness(1.32) contrast(0.92) saturate(0.82); }
+  .about-photo img { width: 100%; max-width: 300px; aspect-ratio: 1 / 1; height: auto; object-fit: cover; object-position: center 28%; display: block; margin: 0 auto; border-radius: 50%; filter: brightness(1.32) contrast(0.92) saturate(0.82); }
   .about-label { font-size: 0.76rem; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(250,246,239,0.65); margin-bottom: 16px; }
   .about-panel h2 { font-family: "Fraunces", serif; font-weight: 300; font-size: clamp(1.6rem, 3.6vw, 2.3rem); line-height: 1.15; color: var(--cream); margin-bottom: 20px; }
   .about-panel p { font-weight: 300; font-size: 1.02rem; color: rgba(250,246,239,0.9); max-width: 62ch; }
@@ -132,6 +132,7 @@
   .table-footer { position: relative; z-index: 1; text-align: center; padding: 2vh 28px 6vh; }
   .footer-inner { position: relative; }
   .table-footer .leaf { width: 30px; height: 30px; color: var(--sage); margin-bottom: 16px; }
+  .table-footer .footer-logo { width: 104px; height: auto; display: block; margin: 0 auto 18px; }
   .table-footer .fname { font-family: "Fraunces", serif; font-size: 1.3rem; color: var(--forest-deep); margin-bottom: 8px; text-shadow: 0 1px 12px rgba(250,246,239,0.95); }
   .table-footer .contact { color: var(--ink); font-size: 0.95rem; text-shadow: 0 1px 10px rgba(250,246,239,0.95); }
   .table-footer .contact a { color: var(--clay); text-decoration: none; }
@@ -146,7 +147,7 @@
     .sig-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: 1fr; gap: 36px; }
     .about-panel { grid-template-columns: 1fr; gap: 24px; }
-    .about-photo img { height: auto; aspect-ratio: 1 / 1; max-width: 260px; margin: 0 auto; }
+    .about-photo img { height: auto; aspect-ratio: 1 / 1; max-width: 300px; margin: 0 auto; }
     header { padding-top: 24px; justify-content: center; }
     .nav-cta { display: none; }
   }
@@ -243,7 +244,7 @@
 
 <footer class="table-footer">
   <div class="footer-inner">
-    <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21c0-7 0-12 8-18-1 9-3 14-8 18z" stroke-linejoin="round"/><path d="M12 21c0-6-1-10-7-14" stroke-linecap="round"/></svg>
+    <img class="footer-logo" src="logo-emblemat-bold.png" alt="Pracownia Holistyczna — Aneta Kurnikowska">
     <div class="fname">Pracownia Holistyczna „Kiedy ciało mówi dość…"</div>
     <div class="contact">Aneta Kurnikowska</div>
     <div class="legal">© 2026 · Wszystkie prawa zastrzeżone</div>

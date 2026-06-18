@@ -40,7 +40,7 @@
   body::before {
     content: "";
     position: absolute; inset: 0; z-index: 0; pointer-events: none;
-    background: url("tlo-nat2a.png") center top / cover no-repeat;
+    background: url("tlo-nat2a.png") center bottom / cover no-repeat;
     filter: contrast(1.22) brightness(0.88) saturate(1.04);
   }
   body::after {
@@ -50,7 +50,7 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
   }
   .atmos { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-  .atmos::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(243,236,224,0.42) 0%, rgba(243,236,224,0.46) 55%, rgba(243,236,224,0.30) 100%); }
+  .atmos::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(243,236,224,0.36) 0%, rgba(243,236,224,0.40) 55%, rgba(243,236,224,0.10) 100%); }
 
   .wrap { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 0 28px; }
 
@@ -62,7 +62,7 @@
 
   .page-head { padding: 7vh 0 1vh; }
   .kicker { font-size: 0.78rem; letter-spacing: 0.34em; text-transform: uppercase; color: var(--forest); margin-bottom: 22px; display: flex; align-items: center; gap: 14px; }
-  .kicker::before { display: none; }
+  .kicker::before { content: ""; width: 38px; height: 1px; background: var(--forest); opacity: 0.6; }
   .page-head h1 { font-family: "Fraunces", serif; font-weight: 300; font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.04; letter-spacing: -0.02em; color: var(--forest-deep); max-width: 20ch; }
   .page-head h1 em { font-style: normal; color: var(--clay); }
   .page-head p { margin-top: 18px; font-size: 1.08rem; font-weight: 300; max-width: 52ch; color: var(--ink-soft); }
@@ -124,6 +124,7 @@
   .error-msg.show { display: block; }
 
   footer { position: relative; z-index: 1; text-align: center; padding: 6vh 28px 6vh; }
+  footer .footer-logo { width: 104px; height: auto; display: block; margin: 0 auto 18px; }
   footer .fname { font-family: "Fraunces", serif; font-size: 1.15rem; color: var(--forest-deep); margin-bottom: 6px; text-shadow: 0 1px 12px rgba(250,246,239,0.95); }
   footer .contact { color: var(--ink); font-size: 0.92rem; text-shadow: 0 1px 10px rgba(250,246,239,0.95); }
   footer .legal { margin-top: 18px; font-size: 0.78rem; color: var(--ink-soft); text-shadow: 0 1px 10px rgba(250,246,239,0.9); }
@@ -258,6 +259,7 @@
 </div>
 
 <footer>
+  <img class="footer-logo" src="logo-emblemat-bold.png" alt="Pracownia Holistyczna — Aneta Kurnikowska">
   <div class="fname">Pracownia Holistyczna „Kiedy ciało mówi dość…"</div>
   <div class="contact">Aneta Kurnikowska</div>
   <div class="legal">© 2026 · Wszystkie prawa zastrzeżone</div>
